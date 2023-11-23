@@ -32,11 +32,30 @@ appropriate use of return values and input parameters
 # a variable. We will use it as the basis for this 
 # assignment.
 
-while True:
-    y = keyboard.read_key()
-    print(y)
-    print(time.now())
-    t = time.localtime()
-    print(t)
-    print(time.strftime("%H",t))
-    break
+#the english alphabet and list of words
+words = ['transcription', 'service', 'business', 'which', 'converts', 'speech', 'into', 'written', 'electronic', 'text', 'metallica']
+
+def enterWord():
+    print("You have to write the correct words 5 times.")
+    start = time.time()
+    
+    n = 0
+    while n < 5:
+        word = random.choice(words)
+        words.remove(word)
+
+        print("Enter — " + word)
+        inputWord = str(input("Enter the word: "))
+        if inputWord == word:
+            print("Correct!")
+            n += 1
+        else:
+            print("Incorrect!")
+
+    print(f"Good job it took you: {round(time.time() - start, 2)} seconds.")
+
+def main():
+    enterWord()
+    
+if __name__ == '__main__':
+    main()

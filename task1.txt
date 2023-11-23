@@ -1,10 +1,11 @@
 example0.py
 Explain what it does. What do the different lines do?
 
-
-
+    It imports the module first. Assigns the time elapsed since the beginning of epoch time (Jan 1, 1970) to a variable 'x'. Prints'x'. Afterwards it goes to sleep for 3.5 seconds, prints that "[it] went to sleep for 3.5 seconds", makes a variable 'now'which stores the time since Jan 1, 1970 and the it prints the difference between 'now' and 'x'
 
 
 example1.py
 Explain what it does. Give a brief summary of the program
 and explain the importance of each line.
+
+    This program keeps track of the amount of time elapsed since it had been activated and an alarm goes off every 10, 20 and 60 seconds. First we have the lists that contain the alarms and the seconds by which they are delayed. Then we populate the list and start an while loop that runs forever. Within the while loop is a for loop has an i that goes between 0 and 2. Within the for loop it stores the current time in a variable 'now' and then checks if now is equal to one of the alarms, and if it is, then we inform the user of the alarm number that went off and how much time has elapsed. Then the for loop ends and the program sleeps for 1 second and prints the time elapsed.
